@@ -1,0 +1,380 @@
+﻿.lineform {
+    padding: 0px 0px 0px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.verde {
+    color: lightgreen;
+}
+
+.rojo {
+    color: red;
+}
+
+.oculto {
+    display: none;
+}
+
+.justificacion {
+    text-align: justify !important;
+}
+
+/*
+    Fix datetimepicker
+*/
+
+.modal-backdrop {
+    z-index: 0 !important;
+}
+
+.wrongRecord {
+    background-color: #d9534f !important;
+    color: white;
+}
+
+    .wrongRecord input {
+        color: black;
+    }
+
+/*
+    Errores
+*/
+label.error {
+    right: 10px;
+    top: 9%;
+    font-weight: 300;
+}
+
+div.form-group label.error {
+    right: 25px;
+}
+
+div.form-group label[for^="cbo"] {
+    right: 55px;
+}
+
+.alert {
+    padding: 20px 15px;
+    font-size: 16px;
+}
+
+table.dataTable thead th, table.dataTable tfoot td {
+    font-weight: bold;
+}
+
+.boton {
+    font-size: 16px;
+    padding: 5px 25px;
+    margin-bottom: 15px;
+}
+
+label {
+    vertical-align: middle;
+}
+
+.dataTables_scrollHeadInner {
+    width: 100% !important;
+}
+
+.display .no-footer .dataTable {
+    width: 100% !important;
+}
+
+.btn-group > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.tituloTabla {
+    text-align: right;
+}
+
+.spacio {
+    margin-right: 10px;
+}
+
+.btn-default {
+    box-shadow: 0 1px 0 0 #444;
+}
+
+.blank {
+    visibility: hidden;
+}
+
+.textoizquierda {
+    float: left;
+    font-size: 18px;
+}
+
+.panel-heading {
+    cursor: pointer !important;
+}
+
+.resultadoValidacion {
+    float: right;
+    margin-right: 0 !important;
+}
+
+h4 span.glyphicon {
+    margin-right: 20px;
+}
+
+.table tbody tr {
+    cursor: pointer;
+}
+
+.tableSinCursor tbody tr {
+    cursor: auto !important;
+    font-size: small;
+}
+
+.table tbody tr:hover {
+    background-color: #EEE !important;
+}
+
+.center-align tr th {
+    text-align: center;
+}
+
+.dataTables_empty {
+    cursor: auto !important;
+}
+
+    .dataTables_empty:hover {
+        cursor: auto !important;
+        background-color: #fff !important;
+    }
+
+.next {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.previous {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.panel-default-datatable {
+    border: 0 !important;
+}
+
+.panel-body-datatable {
+    background-color: white !important;
+}
+
+.margin-bottom-50 {
+    margin-bottom: 50px !important;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px !important;
+}
+
+.margin-top-50 {
+    margin-top: 50px !important;
+}
+
+.margin-top-30 {
+    margin-top: 30px !important;
+}
+
+form h4 {
+    margin-top: 40px;
+}
+
+form div:first-child h4 {
+    margin-top: 12.5px;
+}
+
+/*.red {
+    margin-bottom: 50px !important;
+}*/
+
+.labelAlineado {
+    text-align: left !important;
+}
+
+.popoverCustom {
+    margin-left: 10px;
+}
+
+.popover-content {
+    color: white;
+}
+
+.popover {
+    background-color: black;
+    color: white;
+}
+
+.popover-title {
+    background-color: black;
+    color: white;
+}
+
+.popover.right > .arrow:after {
+    border-right-color: black;
+}
+
+.popover.top > .arrow:after {
+    border-top-color: black;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: black;
+}
+
+.popover.left > .arrow:after {
+    border-left-color: black;
+}
+
+.textoRojo {
+    color: #D0021B;
+}
+
+.bootstrap-tagsinput {
+    width: 100%;
+    margin-bottom: 0px !important;
+}
+
+    .bootstrap-tagsinput input {
+        width: 100%;
+    }
+
+.tag-element {
+    margin-bottom: 30px;
+}
+
+label.input-geo-part {
+    display: block;
+}
+
+input.input-geo-part {
+    width: 2.1em;
+    height: 1.5em;
+    display: inline-block;
+    font-size: 12pt;
+    padding: 1px 6px;
+    text-align: right;
+}
+
+    input.input-geo-part.grades {
+        width: 2.5em;
+    }
+
+    input.input-geo-part.seconds {
+        width: 3.8em;
+    }
+
+.popover {
+    max-width: 33.3% !important;
+}
+
+.ui-datepicker td span.ui-state-default {
+    color: #DDD !important;
+}
+
+/*Format badge*/
+.fixBadge {
+    display: inline-block !important;
+    border-radius: .9em !important;
+    padding: 5px 5px 5px 4.5px !important;
+}
+
+td.details-control {
+    background: url('../../Content/images/details_open.png') no-repeat center center;
+}
+
+tr.shown td.details-control {
+    background: url('../../Content/images/details_close.png') no-repeat center center;
+}
+
+ol.info > li {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-top: 40px;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 0px !important;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 2px solid #ddd !important;
+    padding-left: 8px !important;
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+    border-top: 1px solid #ddd !important;
+    padding: 8px !important;
+}
+
+table.dataTable {
+    border-collapse: collapse;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 0.755em !important;
+}
+
+.odd {
+    background-color: #f9f9f9 !important;
+}
+
+    /*Nueva funcionalidad (No de GB)*/
+    .odd.wrongRecord {
+        background-color: #d9534f !important;
+        color: white;
+    }
+
+.select2-container .select2-selection {
+    max-height: 150px;
+    overflow: auto;
+}
+
+td.detail-volumen input {
+    width: 100% !important;
+    margin-bottom: 1px !important;
+}
+
+#ui-datepicker-div {
+    z-index: 2000 !important;
+}
+
+.fixmap {
+    width: 100%;
+    height: 400px;
+}
+
+th.checkBox {
+    text-align: center;
+}
+
+td.checkBox {
+    text-align: center;
+}
+
+.text-overflow {
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+td.details-control {
+    text-align:center;
+    color:black;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    text-align:center;
+    color:red;
+}

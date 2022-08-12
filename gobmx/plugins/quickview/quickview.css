@@ -1,0 +1,528 @@
+﻿.quickview-wrapper {
+    margin-top: 120px;
+    position: fixed;
+    right: -285px;
+    top: 0;
+    width: 285px;
+    background: #fff;
+    bottom: 0;
+    z-index: 1000;
+    box-shadow: 0 0 9px rgba(191,191,191,.36);
+    border-left: 1px solid rgba(222,227,231,.56);
+    -webkit-transition: -webkit-transform .4s cubic-bezier(.05,.74,.27,.99);
+    transition: transform .4s cubic-bezier(.05,.74,.27,.99);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+    .quickview-wrapper.open {
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        -ms-transform: translate(-100%,0)
+    }
+
+    .quickview-wrapper .quickview-toggle {
+        position: absolute;
+        right: 12px;
+        top: 2px;
+        color: #627182;
+        padding: 6px;
+        opacity: .4
+    }
+
+        .quickview-wrapper .quickview-toggle:hover {
+            opacity: 1
+        }
+
+    .quickview-wrapper .nav-tabs {
+        background-color: #fff;
+        position: relative;
+        padding: 0 43px
+    }
+
+        .quickview-wrapper .nav-tabs > li > a {
+            padding: 11px;
+            color: #627182;
+            border: 0;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 700;
+            min-width: 62px;
+            line-height: 1.4
+        }
+
+            .quickview-wrapper .nav-tabs > li > a > span {
+                opacity: .6
+            }
+
+            .quickview-wrapper .nav-tabs > li > a:hover > span {
+                color: #627182;
+                opacity: 1
+            }
+
+        .quickview-wrapper .nav-tabs > li.active > a, .quickview-wrapper .nav-tabs > li.active > a:focus, .quickview-wrapper .nav-tabs > li.active > a:hover {
+            background-color: transparent;
+            border: 0;
+            color: #c5cad1;
+            opacity: 1
+        }
+
+        .quickview-wrapper .nav-tabs ~ .tab-content {
+            position: absolute;
+            padding: 0;
+            left: 0;
+            right: 0;
+            top: 38px;
+            bottom: 0;
+            height: auto
+        }
+
+            .quickview-wrapper .nav-tabs ~ .tab-content > div {
+                height: 100%
+            }
+
+            .quickview-wrapper .nav-tabs ~ .tab-content ul {
+                margin: 0;
+                padding: 0
+            }
+
+                .quickview-wrapper .nav-tabs ~ .tab-content ul li {
+                    list-style: none
+                }
+
+            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes {
+                background: #fbf9e3
+            }
+
+                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes a, .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes button {
+                    color: #968974
+                }
+
+                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list {
+                    position: relative
+                }
+
+                    .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar {
+                        height: 50px;
+                        padding: 0 25px
+                    }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul {
+                            margin-top: 10px
+                        }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li {
+                                display: inline-block;
+                                height: auto
+                            }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li a {
+                                    height: 22px;
+                                    line-height: 22px;
+                                    display: block;
+                                    padding: 0 5px;
+                                    font-size: 14px
+                                }
+
+                                    .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li a.selected, .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar ul > li a:hover {
+                                        background: #968974;
+                                        color: #fbf9e3
+                                    }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list .toolbar .btn-remove-notes {
+                            background: 0 0;
+                            bottom: 8px;
+                            display: block;
+                            left: 50%;
+                            margin-left: -40%;
+                            position: absolute;
+                            width: 83%;
+                            border: 1px solid #968974
+                        }
+
+                    .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul {
+                        padding: 0
+                    }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li {
+                            cursor: pointer;
+                            height: 42px;
+                            padding: 0 25px;
+                            display: block;
+                            clear: both
+                        }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left {
+                                float: left;
+                                width: 65%;
+                                height: 100%;
+                                padding-top: 9px
+                            }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left .checkbox {
+                                    display: none;
+                                    float: left
+                                }
+
+                                    .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left .checkbox label {
+                                        margin-right: 0;
+                                        vertical-align: text-top
+                                    }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .left p {
+                                    margin: 0;
+                                    font-size: 13px;
+                                    font-weight: 700;
+                                    width: 100px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    vertical-align: middle;
+                                    display: inline-block
+                                }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .right {
+                                font-size: 10.5px;
+                                text-align: right;
+                                width: 35%;
+                                line-height: 41px
+                            }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li .right .date {
+                                    margin-right: 10px
+                                }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .list > ul li:hover {
+                                background: #f4ecd1
+                            }
+
+                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note {
+                    background-image: url(../../img/notes_lines.png);
+                    background-repeat: repeat-y;
+                    background-position: 27px top
+                }
+
+                    .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note > div {
+                        display: table;
+                        height: 100%;
+                        width: 100%
+                    }
+
+                    .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar {
+                        background: #fcfcfa;
+                        height: 35px;
+                        width: 100%;
+                        display: table-row;
+                        box-shadow: 0 1px 1px -1px rgba(0,0,0,.33)
+                    }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li {
+                            display: inline-block;
+                            border-right: 1px solid #edecec;
+                            float: left;
+                            line-height: 37px;
+                            padding: 0;
+                            text-align: center;
+                            width: 40px;
+                            height: auto
+                        }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li > a {
+                                color: #a5a5a5;
+                                display: block;
+                                font-size: 14px
+                            }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li > a:hover {
+                                    background: #fffaf6
+                                }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar > li > a.active {
+                                    color: #333;
+                                    background: #f9f1ea
+                                }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .toolbar:after {
+                            position: absolute;
+                            content: "";
+                            width: 100%
+                        }
+
+                    .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body {
+                        display: table-row;
+                        height: 100%
+                    }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body > div {
+                            display: table;
+                            height: 100%;
+                            width: 100%;
+                            padding: 0 20px 0 45px;
+                            white-space: normal
+                        }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .top {
+                            height: 50px;
+                            display: table-row;
+                            clear: both;
+                            line-height: 50px;
+                            text-align: center
+                        }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .top > a {
+                                float: left;
+                                color: #b0b0a8;
+                                margin-left: 10px
+                            }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .top > span {
+                                font-style: italic;
+                                color: #b0b0a8;
+                                font-size: 11px
+                            }
+
+                        .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content {
+                            display: table-row;
+                            height: 100%
+                        }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content form {
+                                height: 100%
+                            }
+
+                            .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor {
+                                font-size: 12px
+                            }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor:focus {
+                                    outline: 0
+                                }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor::-moz-selection {
+                                    background: #fef8ae
+                                }
+
+                                .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor::selection {
+                                    background: #fef8ae
+                                }
+
+.view-port {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    white-space: nowrap;
+    word-spacing: 0;
+    font-size: 0;
+    overflow: hidden
+}
+
+    .view-port > * {
+        font-size: initial
+    }
+
+    .view-port .navbar {
+        border-radius: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+        border-left: 0;
+        display: table;
+        width: 100%;
+        top: 0;
+        border-top: 0;
+        padding: 0;
+        border-bottom: 1px solid #e7e7e7
+    }
+
+        .view-port .navbar .navbar-inner {
+            display: table-cell;
+            height: 50px;
+            vertical-align: middle
+        }
+
+        .view-port .navbar .action {
+            position: absolute;
+            top: 0;
+            line-height: 50px;
+            z-index: 1
+        }
+
+            .view-port .navbar .action.pull-right {
+                right: 0
+            }
+
+        .view-port .navbar .view-heading {
+            font-size: 15px;
+            text-align: center
+        }
+
+        .view-port .navbar > p {
+            line-height: 12px;
+            font-size: 12px;
+            margin: 0
+        }
+
+        .view-port .navbar.navbar-sm {
+            min-height: 35px
+        }
+
+            .view-port .navbar.navbar-sm .navbar-inner {
+                height: 35px
+            }
+
+            .view-port .navbar.navbar-sm .action {
+                line-height: 35px
+            }
+
+    .view-port .view {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease
+    }
+
+        .view-port .view:first-child:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0;
+            -webkit-transition: opacity .2s linear;
+            transition: opacity .2s linear;
+            z-index: -1
+        }
+
+        .view-port .view:only-child {
+            margin: 0
+        }
+
+    .view-port.from-top > .view:last-child {
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        -ms-transform: translate(-100%,0)
+    }
+
+    .view-port.push > .view:first-child {
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        -ms-transform: translate(-100%,0)
+    }
+
+    .view-port.push > .view:last-child {
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        -ms-transform: translate(-100%,0)
+    }
+
+    .view-port.push-parrallax > .view:first-child {
+        -webkit-transition: all .4s cubic-bezier(.1,.7,.1,1);
+        transition: all .4s cubic-bezier(.1,.7,.1,1);
+        -webkit-transform: translate3d(-25%,0,0);
+        transform: translate3d(-25%,0,0);
+        -ms-transform: translate(-25%,0)
+    }
+
+        .view-port.push-parrallax > .view:first-child:before {
+            opacity: 0;
+            z-index: 100
+        }
+
+    .view-port.push-parrallax > .view:last-child {
+        -webkit-transition: all .4s cubic-bezier(.1,.7,.1,1);
+        transition: all .4s cubic-bezier(.1,.7,.1,1);
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        -ms-transform: translate(-100%,0);
+        box-shadow: 0 0 9px rgba(191,191,191,.36)
+    }
+
+.chat-view .chat-inner {
+    padding: 5px;
+    overflow-x: hidden;
+    height: calc(100% - 103px)
+}
+
+.chat-view .message {
+    margin-bottom: 10px;
+    line-height: 30px
+}
+
+.chat-view .profile-img-wrapper {
+    height: 28px;
+    width: 28px
+}
+
+.chat-view .chat-bubble {
+    position: relative;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 5px 0 0 5px;
+    max-width: 60%;
+    white-space: normal;
+    font-size: 10pt;
+}
+
+    .chat-view .chat-bubble > p {
+        margin: 0
+    }
+
+    .chat-view .chat-bubble.from-me {
+        background: #ccfaf1;
+        color: #373e43;
+        opacity: .8;
+        float: right;
+        border: 1px solid rgba(0,0,0,.07)
+    }
+
+    .chat-view .chat-bubble.from-them {
+        color: #373e43;
+        background: #f2f4f5;
+        position: relative;
+        opacity: .8;
+        float: left;
+        border: 1px solid #edf7f5
+    }
+
+.chat-view .chat-input {
+    border: 0;
+    height: 45px
+}
+
+    .chat-view .chat-input:active, .chat-view .chat-input:focus {
+        background-color: #fff
+    }
+
+.chat-view .user-controls {
+    padding-top: 12px
+}
+
+.chat-user-list > a {
+    height: 60px
+}
+
+.inline {
+    display: inline-block!important;
+}
+
+.p-l-10 {
+    padding-left: 10px!important;
+}
+.p-r-10 {
+    padding-right: 10px!important;
+}
+.text-master {
+    color: #7a8994!important;
+}
+.link {
+    opacity: .7;
+}
